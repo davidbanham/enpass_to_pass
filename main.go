@@ -39,15 +39,15 @@ func main() {
 		}
 		for i, cell := range line {
 			switch cell {
-			case "Email":
+			case "Email", "email":
 				if p.Username == "" {
 					p.Username = line[i+1]
 				} else {
 					p.Email = line[i+1]
 				}
-			case "Username":
+			case "Username", "username":
 				p.Username = line[i+1]
-			case "Password":
+			case "Password", "password":
 				p.Password = line[i+1]
 			case "URL":
 				p.URL = strings.SplitN(line[i+1], "?", 2)[0]
